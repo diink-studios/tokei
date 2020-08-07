@@ -1,4 +1,5 @@
 import { app, Tray, Menu, nativeImage } from 'electron';
+import { appManager } from './AppManager';
 
 export class TrayMenu {
   // Create a variable to store our tray
@@ -33,7 +34,7 @@ export class TrayMenu {
         label: 'Tokei',
         type: 'normal',
         click: () => { 
-          /* Later this will open the Main Window */ 
+          /* Later this will open the Main Window */ appManager.getWindow('AlarmWindow').window.show();
         }
       },
       {
