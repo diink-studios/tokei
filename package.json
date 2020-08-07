@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "Francisco Amorim",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/react": "^16.9.44",
     "@types/react-dom": "^16.9.8",
