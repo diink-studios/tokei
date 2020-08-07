@@ -5,15 +5,16 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "start": "npm run build && electron ./dist/index.js",
+    "start": "npm run build && electron ./dist/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Francisco Amorim",
   "license": "ISC",
   "devDependencies": {
     "@types/react": "^16.9.44",
     "@types/react-dom": "^16.9.8",
+    "copy-webpack-plugin": "^6.0.3",
     "css-loader": "^4.2.0",
     "electron": "^9.1.2",
     "html-webpack-plugin": "^4.3.0",

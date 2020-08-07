@@ -1,9 +1,10 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 const electronConfiguration = {
   mode: 'development',
-  entry: './src/index.ts',
+  entry: './src/main.ts',
   target: 'electron-main',
   resolve: {
     alias: {
@@ -20,11 +21,18 @@ const electronConfiguration = {
   },
   output: {
     path: __dirname + '/dist',
-    filename: 'index.js'
-  }
+    filename: 'main.js'
+  },
+  plugins: [
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/assets', to: 'assets' },
+      ],
+    }),
+  ],
 };
 
-const reactConfiguration =  {
+const reactConfiguration = {
   mode: 'development',
   entry: './src/renderer.tsx',
   target: 'electron-renderer',
