@@ -18,7 +18,7 @@ export class AlarmWindow {
     })
 
     // Load our index.html
-    window.loadURL(`${app.getAppPath()}/index.html`)
+    window.loadURL(`file://${app.getAppPath()}/index.html`)
     return window;
   }
 }

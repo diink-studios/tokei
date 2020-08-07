@@ -11,7 +11,7 @@ class AppManager {
     this.trayMenu = tray;
   }
 
-  getTray(tray: TrayMenu): TrayMenu {
+  getTray(): TrayMenu {
     return this.trayMenu;
   }
 
@@ -23,7 +23,7 @@ class AppManager {
     const element = this.windowManager.get(name);
     if (element) {
       return element;
-    } 
+    }
     throw new Error(`[AppManager] - Element with name ${name} doesn't exist!`)
   }
 
