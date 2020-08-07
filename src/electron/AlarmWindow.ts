@@ -16,8 +16,9 @@ export class AlarmWindow {
         nodeIntegration: true
       }
     })
+
+    // Load our index.html
     window.loadURL(`${app.getAppPath()}/index.html`)
     return window;
   }
-
 }
