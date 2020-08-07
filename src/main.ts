@@ -1,11 +1,14 @@
 import { app, BrowserWindow } from 'electron';
-import { TrayMenu } from '@/electron/TrayMenu';
 
-const appElements: any = {
-  tray: null,
-  windows: []
-};
+const createWindow = () => {
+  const win = new BrowserWindow({
+    width: 800,
+    height: 800,
+    webPreferences: {
+      nodeIntegration: true
+    }
+  })
+  win.loadURL('index.html');
+}
 
-app.on('ready', () => {
-  appElements.tray = new TrayMenu();
-});
+app.on('ready', createWindow);
